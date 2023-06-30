@@ -1,0 +1,197 @@
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 16, 2023 - 14:22:41
+Django version 3.2, using settings 'Quicksight_Dashboard_Viewer.settings'
+Starting development server at http://0:80/
+Quit the server with CONTROL-C.
+Error: You don't have permission to access that port.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 16, 2023 - 14:23:15
+Django version 3.2, using settings 'Quicksight_Dashboard_Viewer.settings'
+Starting development server at http://0:80/
+Quit the server with CONTROL-C.
+[16/Jun/2023 14:23:22] "GET / HTTP/1.1" 200 1830
+[16/Jun/2023 14:23:31] "GET / HTTP/1.1" 200 1830
+[16/Jun/2023 14:23:38] "GET / HTTP/1.1" 200 1830
+[16/Jun/2023 14:23:44] "POST / HTTP/1.1" 302 0
+[16/Jun/2023 14:23:46] "GET /dashboard/ HTTP/1.1" 200 3677
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 30, 2023 - 15:21:56
+Django version 3.2, using settings 'Quicksight_Dashboard_Viewer.settings'
+Starting development server at http://0:80/
+Quit the server with CONTROL-C.
+[30/Jun/2023 15:22:19] "GET / HTTP/1.1" 200 1830
+Not Found: /favicon.ico
+[30/Jun/2023 15:22:22] "GET /favicon.ico HTTP/1.1" 404 2255
+[30/Jun/2023 15:22:28] "POST / HTTP/1.1" 302 0
+[30/Jun/2023 15:22:30] "GET /dashboard/ HTTP/1.1" 200 3677
+Not Found: /portal/redlion
+[30/Jun/2023 16:04:31] "GET /portal/redlion HTTP/1.1" 404 2266
+[30/Jun/2023 16:05:17] "GET / HTTP/1.1" 200 1830
+Not Found: /blog/
+[30/Jun/2023 16:05:18] "GET /blog/ HTTP/1.1" 404 2237
+Not Found: /wp/
+[30/Jun/2023 16:05:19] "GET /wp/ HTTP/1.1" 404 2231
+Not Found: /wordpress/
+[30/Jun/2023 16:05:21] "GET /wordpress/ HTTP/1.1" 404 2252
+Not Found: /new/
+[30/Jun/2023 16:05:22] "GET /new/ HTTP/1.1" 404 2234
+Not Found: /old/
+[30/Jun/2023 16:05:23] "GET /old/ HTTP/1.1" 404 2234
+Not Found: /test/
+[30/Jun/2023 16:05:24] "GET /test/ HTTP/1.1" 404 2237
+Not Found: /main/
+[30/Jun/2023 16:05:25] "GET /main/ HTTP/1.1" 404 2237
+Not Found: /site/
+[30/Jun/2023 16:05:27] "GET /site/ HTTP/1.1" 404 2237
+Not Found: /backup/
+[30/Jun/2023 16:05:28] "GET /backup/ HTTP/1.1" 404 2243
+Not Found: /demo/
+[30/Jun/2023 16:05:29] "GET /demo/ HTTP/1.1" 404 2237
+Not Found: /home/
+[30/Jun/2023 16:05:30] "GET /home/ HTTP/1.1" 404 2237
+Not Found: /tmp/
+[30/Jun/2023 16:05:32] "GET /tmp/ HTTP/1.1" 404 2234
+Not Found: /cms/
+[30/Jun/2023 16:05:32] "GET /cms/ HTTP/1.1" 404 2234
+Not Found: /dev/
+[30/Jun/2023 16:05:34] "GET /dev/ HTTP/1.1" 404 2234
+Not Found: /old-wp/
+[30/Jun/2023 16:05:35] "GET /old-wp/ HTTP/1.1" 404 2243
+Not Found: /web/
+[30/Jun/2023 16:05:36] "GET /web/ HTTP/1.1" 404 2234
+Not Found: /old-site/
+[30/Jun/2023 16:05:37] "GET /old-site/ HTTP/1.1" 404 2249
+Not Found: /temp/
+[30/Jun/2023 16:05:38] "GET /temp/ HTTP/1.1" 404 2237
+Not Found: /2018/
+[30/Jun/2023 16:05:39] "GET /2018/ HTTP/1.1" 404 2237
+Not Found: /2019/
+[30/Jun/2023 16:05:39] "GET /2019/ HTTP/1.1" 404 2237
+Not Found: /bk/
+[30/Jun/2023 16:05:40] "GET /bk/ HTTP/1.1" 404 2231
+Not Found: /wp1/
+[30/Jun/2023 16:05:41] "GET /wp1/ HTTP/1.1" 404 2234
+Not Found: /wp2/
+[30/Jun/2023 16:05:42] "GET /wp2/ HTTP/1.1" 404 2234
+Not Found: /v1/
+[30/Jun/2023 16:05:43] "GET /v1/ HTTP/1.1" 404 2231
+Not Found: /v2/
+[30/Jun/2023 16:05:44] "GET /v2/ HTTP/1.1" 404 2231
+Not Found: /bak/
+[30/Jun/2023 16:05:45] "GET /bak/ HTTP/1.1" 404 2234
+Not Found: /install/
+[30/Jun/2023 16:05:45] "GET /install/ HTTP/1.1" 404 2246
+Not Found: /2020/
+[30/Jun/2023 16:05:46] "GET /2020/ HTTP/1.1" 404 2237
+Not Found: /new-site/
+[30/Jun/2023 16:05:47] "GET /new-site/ HTTP/1.1" 404 2249
+[30/Jun/2023 16:10:28] "GET / HTTP/1.1" 200 1830
+Not Found: /cf_scripts/scripts/ajax/ckeditor/ckeditor.js
+[30/Jun/2023 16:10:29] "GET /cf_scripts/scripts/ajax/ckeditor/ckeditor.js HTTP/1.1" 404 2356
+Not Found: /.git/config
+[30/Jun/2023 16:13:49] "GET /.git/config HTTP/1.1" 404 2257
+Not Found: /actuator/health
+[30/Jun/2023 16:14:40] "GET /actuator/health HTTP/1.1" 404 2269
+Not Found: /_profiler/phpinfo
+[30/Jun/2023 16:14:52] "GET /_profiler/phpinfo HTTP/1.1" 404 2273
+Not Found: /wp-login.php
+[30/Jun/2023 16:15:16] "GET /wp-login.php HTTP/1.1" 404 2258
+[30/Jun/2023 16:30:14] "GET / HTTP/1.1" 200 1830
+Not Found: /wp-includes/wlwmanifest.xml
+[30/Jun/2023 16:30:14] "GET //wp-includes/wlwmanifest.xml HTTP/1.1" 404 2303
+Not Found: /xmlrpc.php
+[30/Jun/2023 16:30:15] "GET //xmlrpc.php?rsd HTTP/1.1" 404 2256
+[30/Jun/2023 16:30:15] "GET / HTTP/1.1" 200 1830
+Not Found: /blog/wp-includes/wlwmanifest.xml
+[30/Jun/2023 16:30:16] "GET //blog/wp-includes/wlwmanifest.xml HTTP/1.1" 404 2318
+Not Found: /web/wp-includes/wlwmanifest.xml
+[30/Jun/2023 16:30:16] "GET //web/wp-includes/wlwmanifest.xml HTTP/1.1" 404 2315
+Not Found: /wordpress/wp-includes/wlwmanifest.xml
+[30/Jun/2023 16:30:17] "GET //wordpress/wp-includes/wlwmanifest.xml HTTP/1.1" 404 2333
+Not Found: /website/wp-includes/wlwmanifest.xml
+[30/Jun/2023 16:30:18] "GET //website/wp-includes/wlwmanifest.xml HTTP/1.1" 404 2327
+Not Found: /wp/wp-includes/wlwmanifest.xml
+[30/Jun/2023 16:30:18] "GET //wp/wp-includes/wlwmanifest.xml HTTP/1.1" 404 2312
+Not Found: /news/wp-includes/wlwmanifest.xml
+[30/Jun/2023 16:30:19] "GET //news/wp-includes/wlwmanifest.xml HTTP/1.1" 404 2318
+Not Found: /2020/wp-includes/wlwmanifest.xml
+[30/Jun/2023 16:30:19] "GET //2020/wp-includes/wlwmanifest.xml HTTP/1.1" 404 2318
+Not Found: /2019/wp-includes/wlwmanifest.xml
+[30/Jun/2023 16:30:20] "GET //2019/wp-includes/wlwmanifest.xml HTTP/1.1" 404 2318
+Not Found: /shop/wp-includes/wlwmanifest.xml
+[30/Jun/2023 16:30:20] "GET //shop/wp-includes/wlwmanifest.xml HTTP/1.1" 404 2318
+Not Found: /wp1/wp-includes/wlwmanifest.xml
+[30/Jun/2023 16:30:21] "GET //wp1/wp-includes/wlwmanifest.xml HTTP/1.1" 404 2315
+Not Found: /test/wp-includes/wlwmanifest.xml
+[30/Jun/2023 16:30:21] "GET //test/wp-includes/wlwmanifest.xml HTTP/1.1" 404 2318
+Not Found: /wp2/wp-includes/wlwmanifest.xml
+[30/Jun/2023 16:30:22] "GET //wp2/wp-includes/wlwmanifest.xml HTTP/1.1" 404 2315
+Not Found: /site/wp-includes/wlwmanifest.xml
+[30/Jun/2023 16:30:23] "GET //site/wp-includes/wlwmanifest.xml HTTP/1.1" 404 2318
+Not Found: /cms/wp-includes/wlwmanifest.xml
+[30/Jun/2023 16:30:23] "GET //cms/wp-includes/wlwmanifest.xml HTTP/1.1" 404 2315
+Not Found: /sito/wp-includes/wlwmanifest.xml
+[30/Jun/2023 16:30:24] "GET //sito/wp-includes/wlwmanifest.xml HTTP/1.1" 404 2318
+Invalid HTTP_HOST header: 'ip-172-31-20-81.ap-southeast-2.compute.internal'. You may need to add 'ip-172-31-20-81.ap-southeast-2.compute.internal' to ALLOWED_HOSTS.
+Bad Request: /
+[30/Jun/2023 16:55:48] "GET / HTTP/1.1" 200 1830
+Traceback (most recent call last):
+  File "/usr/lib64/python3.9/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib64/python3.9/wsgiref/handlers.py", line 184, in finish_response
+    self.write(data)
+  File "/usr/lib64/python3.9/wsgiref/handlers.py", line 293, in write
+    self._write(data)
+  File "/usr/lib64/python3.9/wsgiref/handlers.py", line 467, in _write
+    result = self.stdout.write(data)
+  File "/usr/lib64/python3.9/socketserver.py", line 826, in write
+    self._sock.sendall(b)
+TimeoutError: [Errno 110] Connection timed out
+[30/Jun/2023 17:33:59] "GET / HTTP/1.1" 200 1830
+[30/Jun/2023 17:35:16] code 400, message Bad request version ('À\x14À')
+[30/Jun/2023 17:35:16] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[30/Jun/2023 17:35:17] code 400, message Bad request version ('À\x14À')
+[30/Jun/2023 17:35:17] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[30/Jun/2023 17:35:17] "GET / HTTP/1.1" 200 1830
+Not Found: /client/get_targets
+[30/Jun/2023 17:35:18] "GET /client/get_targets HTTP/1.1" 404 2278
+Not Found: /upl.php
+[30/Jun/2023 17:35:18] "GET /upl.php HTTP/1.1" 404 2245
+[30/Jun/2023 17:35:19] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03\x96w\x12yê@;|íóí\x7fo\x84~`T_\x98É¤PáÈÌÕ¤=þ;\x1aÉ\x00\x00\x1aÀ/À+À\x11À\x07À\x13À')
+[30/Jun/2023 17:35:19] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Not Found: /geoip/
+[30/Jun/2023 17:35:20] "GET /geoip/ HTTP/1.1" 404 2242
+[30/Jun/2023 17:35:20] "GET / HTTP/1.1" 200 1830
+Not Found: /favicon.ico
+[30/Jun/2023 17:35:21] "GET /favicon.ico HTTP/1.1" 404 2257
+Not Found: /1.php
+[30/Jun/2023 17:35:22] "GET /1.php HTTP/1.1" 404 2239
+Not Found: /bundle.js
+[30/Jun/2023 17:35:22] "GET /bundle.js HTTP/1.1" 404 2251
+Not Found: /files/
+[30/Jun/2023 17:35:23] "GET /files/ HTTP/1.1" 404 2242
+[30/Jun/2023 17:46:11] code 400, message Bad request version ('À\x14À')
+[30/Jun/2023 17:46:11] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[30/Jun/2023 18:00:57,872] - Broken pipe from ('45.79.163.53', 36332)
+
+[30/Jun/2023 18:01:01] "GET / HTTP/1.1" 200 1830
+[30/Jun/2023 18:01:05] "GET / HTTP/1.1" 200 1830
+[30/Jun/2023 18:01:13,629] - Broken pipe from ('45.79.163.53', 36333)
+
+Not Found: /.env
+[30/Jun/2023 18:08:22] "GET /.env HTTP/1.1" 404 2236
+Forbidden (CSRF cookie not set.): /
+[30/Jun/2023 18:08:24] "POST / HTTP/1.1" 403 2870

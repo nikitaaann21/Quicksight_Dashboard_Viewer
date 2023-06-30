@@ -1,0 +1,25 @@
+from django.shortcuts import render
+import boto3
+from botocore.exceptions import NoCredentialsError
+
+
+def dashboard_view(request):
+    # Initialize Boto3 client for QuickSight
+    client = boto3.client('quicksight', region_name='ap-southeast-2')
+
+    # Retrieve the dashboard embed URL for registered users and pass it to the template
+    try:
+        response = client.generate_embed_url_for_registered_user(
+            AwsAccountId='AWSACCID',
+            DashboardId='DASHBOARDID',
+            SessionLifetimeInMinutes=60,
+            UserArn='arn:aws:quicksight:<region>:<account-id>:user/<username>'
+        )
+        embed_url = response['EmbedUrl']
+    except NoCredentialsError:
+        # Handle error when AWS credentials are missing
+        embed_url = None
+
+    return render(request, 'dashboard.html', {'embed_url': embed_url})
+
+
