@@ -57,6 +57,7 @@
 
 <body>
     <h1>QuickSight Dashboard</h1>
+    <a href="{% url 'logout' %}" class="btn btn-primary"> Logout</a>
     <div>
         <!-- Embed the QuickSight dashboard using an iframe -->
         <iframe src="{{ embed_url }}" width="100%" height="600px"></iframe>

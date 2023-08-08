@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-3%!e%4m0^b$zk^cl=2&wh=bq^^^&d%k1o0&xdeh3gprh_0*4+k
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['54.252.13.172','54.206.54.91','3.26.149.244','13.210.171.170','13.236.7.218','mkarjun.com','abilytics.mkarjun.com']
+ALLOWED_HOSTS = ['127.0.0.1','54.252.13.172','54.206.54.91','3.26.149.244','13.210.171.170','13.236.7.218','mkarjun.com','abilytics.mkarjun.com']
 
 
 # Application definition
@@ -100,7 +100,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
+#AUTH_USER_MODEL=['dashboard.CustomUser']
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
 

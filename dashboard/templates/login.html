@@ -9,10 +9,13 @@
     <h1>Login</h1>
     <form method="post">
         {% csrf_token %}
-        <label for="user_arn">Quicksight User ARN:</label>
-        <input type="text" id="user_arn" name="user_arn" required>
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" required>
+        <label for="password">Password</label>
+        <input type="text" id="password" name="pass" required>
         <br><br>
         <input type="submit" value="Login">
+        <a href="{% url 'signup' %}">Create a new account</a>
     </form>
 </body>
 </html>
