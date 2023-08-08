@@ -43,7 +43,7 @@ def signup_view(request):
         if pass1!=pass2:
             return HttpResponse("Your password is not the same")
         else:
-            my_user=User.object.create_user(uname,email,pass1)
+            my_user=User.objects.create_user(uname,email,pass1)
             my_user.save()
             iam_client = boto3.client('iam')
         
