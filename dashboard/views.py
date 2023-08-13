@@ -68,7 +68,7 @@ def signup_view(request):
                 'Resource': d_arn
             }]
         }
-        iam_client.put_user_policy(UserName=uname, PolicyName=policy_name, PolicyDocument=str(policy_document))
+        iam_client.put_user_policy(UserName=uname, PolicyName=policy_name, PolicyDocument=policy_document)
 
 
         # Save the user ARN to the session
