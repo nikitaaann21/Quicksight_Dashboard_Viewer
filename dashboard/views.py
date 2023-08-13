@@ -59,12 +59,13 @@ def signup_view(request):
        
         # Attach the required policy to the user
         policy_name = 'DashboardAccessPolicy'
+        d_arn=f'arn:aws:quicksight:*:*:dashboard/{dashboard_name}'
         policy_document = {
             'Version': '2012-10-17',
             'Statement': [{
                 'Effect': 'Allow',
                 'Action': 'quicksight:GetDashboardEmbedUrl',
-                'Resource': f'arn:aws:quicksight:*:*:dashboard/{dashboard_name}'
+                'Resource': d_arn
             }]
         }
         iam_client.put_user_policy(UserName=uname, PolicyName=policy_name, PolicyDocument=str(policy_document))
