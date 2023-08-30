@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-3%!e%4m0^b$zk^cl=2&wh=bq^^^&d%k1o0&xdeh3gprh_0*4+k
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1','54.166.243.100','54.252.13.172','54.206.54.91','3.26.149.244','13.210.171.170','13.236.7.218','mkarjun.com','abilytics.mkarjun.com']
+ALLOWED_HOSTS = ['127.0.0.1','18.210.114.220','54.166.243.100','54.252.13.172','54.206.54.91','3.26.149.244','13.210.171.170','13.236.7.218','mkarjun.com','abilytics.mkarjun.com']
 
 
 # Application definition
@@ -127,8 +127,8 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-AWS_REGION = 'ap-southeast-2'  # Replace with your desired AWS region
-AWS_ACCOUNT_ID = '233425133219'  # Replace with your AWS account ID
+AWS_REGION = 'us-east-1'  # Replace with your desired AWS region
+AWS_ACCOUNT_ID = '315293714260'  # Replace with your AWS account ID
 QUICKSIGHT_SESSION_LIFETIME = 600  # Replace with your desired session lifetime (in minutes)
-QUICKSIGHT_DASHBOARD_ID = '92a07704-705e-483e-8f68-44781d90de4b'
+#QUICKSIGHT_DASHBOARD_ID = '92a07704-705e-483e-8f68-44781d90de4b'
 #SESSION_SERIALIZER = 'django.contrib.sessions.serializers.PickleSerializer'

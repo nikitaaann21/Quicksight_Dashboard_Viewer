@@ -15,7 +15,7 @@ def login_view(request):
         user=authenticate(request,username=username,password=pass1)
         if user is not None:
             login(request,user)
-            user_arn = f'arn:aws:quicksight:us-east-1:233425133219:user/default/{username}'
+            user_arn = f'arn:aws:quicksight:us-east-1:315293714260:user/default/{username}'
 
             # Save the user ARN to the session
             request.session['user_arn'] = user_arn
