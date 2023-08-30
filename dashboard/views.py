@@ -33,6 +33,24 @@ def login_view(request):
         #return redirect('dashboard')
     else:
         return render(request, 'login.html')
+
+
+def get_dashboard_id_by_name(dashboard_name):
+    try:
+        # List all dashboards in the QuickSight account
+        response = quicksight_client.list_dashboards()
+
+        # Iterate through the list of dashboards to find the one with the matching name
+        for dashboard in response['DashboardSummaryList']:
+            if dashboard['Name'] == dashboard_name:
+                # Return the DashboardId if the name matches
+                return dashboard['DashboardId']
+
+        # If the dashboard with the specified name is not found, return None
+        return None
+    except Exception as e:
+        # Handle exceptions here, you can customize the error response
+        return HttpResponse(f"Error: {str(e)}")
     
 def signup_view(request):
     if request.method=='POST':
@@ -55,6 +73,7 @@ def signup_view(request):
         # Set the password for the user
         iam_client.create_login_profile(UserName=uname, Password=pass1, PasswordResetRequired=False)
         dashboard_name=uname
+        request.session['dashboard_name'] = dashboard_name
 
        
         # Attach the required policy to the user
@@ -70,7 +89,8 @@ def signup_view(request):
         }
 
         #policy_document="{'Version': '2012-10-17','Statement': {'Effect': 'Allow','Action': 'quicksight:GetDashboardEmbedUrl','Resource':"+ d_arn+"}}"
-        #print(policy_document)
+        print(d_arn)
+        print(policy_document)
         iam_client.put_user_policy(UserName=uname, PolicyName=policy_name, PolicyDocument=str(policy_document))
 
 
@@ -85,17 +105,25 @@ def signup_view(request):
 def dashboard_view(request):
     # Retrieve the user ARN from the session
     user_arn = request.session.get('user_arn')
+    dashboard_name = request.session.get('dashboard_name', None)
+    dashboard_id = get_dashboard_id_by_name(dashboard_name)
+    if dashboard_id:
+        # Generate embed URL for the registered user
+        embed_url = generateEmbedUrlForRegisteredUser(user_arn, dashboard_id)
 
-    # Generate embed URL for the registered user
-    embed_url = generateEmbedUrlForRegisteredUser(user_arn)
+        return render(request, 'dashboard.html', {'embed_url': embed_url})
+    else:
+        return HttpResponse(f"No dashboard found.")
 
-    return render(request, 'dashboard.html', {'embed_url': embed_url})
 
-def generateEmbedUrlForRegisteredUser(user_arn):
+
+
+def generateEmbedUrlForRegisteredUser(user_arn,dashboard_id):
     # Generate the embed URL using the QuickSight API
+    
     response = quicksight_client.get_dashboard_embed_url(
         AwsAccountId=settings.AWS_ACCOUNT_ID,
-        DashboardId=settings.QUICKSIGHT_DASHBOARD_ID,
+        DashboardId=dashboard_id,
         IdentityType='QUICKSIGHT',
         SessionLifetimeInMinutes=settings.QUICKSIGHT_SESSION_LIFETIME,
         UserArn=user_arn
