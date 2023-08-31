@@ -101,9 +101,9 @@ def signup_view(request):
 
 
         #policy_document="{'Version': '2012-10-17','Statement': {'Effect': 'Allow','Action': 'quicksight:GetDashboardEmbedUrl','Resource':"+ d_arn+"}}"
-        print(d_id)
-        print(d_arn)
-        print(policy_document)
+        #print(d_id)
+        #print(d_arn)
+        #print(policy_document)
         policy_document_str = json.dumps(policy_document)
         iam_client.put_user_policy(UserName=uname, PolicyName=policy_name, PolicyDocument=policy_document_str)
 
@@ -135,7 +135,7 @@ def dashboard_view(request):
 
 def generateEmbedUrlForRegisteredUser(user_arn,dashboard_id):
     # Generate the embed URL using the QuickSight API
-    
+    print(dashboard_id)
     response = quicksight_client.get_dashboard_embed_url(
         AwsAccountId=settings.AWS_ACCOUNT_ID,
         DashboardId=dashboard_id,
