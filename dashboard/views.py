@@ -51,8 +51,7 @@ def get_dashboard_id_by_name(dashboard_name):
                 # Return the DashboardId if the name matches
                 return dashboard['DashboardId']
 
-        # If the dashboard with the specified name is not found, raise an exception
-        raise Exception(f"Dashboard with name '{dashboard_name}' not found.")
+        
     
     except Exception as e:
         # Re-raise the exception so the caller can handle it
