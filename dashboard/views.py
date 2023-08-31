@@ -84,16 +84,30 @@ def signup_view(request):
 
        
         # Attach the required policy to the user
-        policy_name = 'DashboardAccessPolicy'
+        policy_name = f'DashboardAccessPolicy_{dashboard_name}'
         d_arn=f'arn:aws:quicksight:us-east-1:315293714260:dashboard/{d_id}'
-        policy_document = {
-            'Version': '2012-10-17',
-            'Statement': [{
-                'Effect': 'Allow',
-                'Action': 'quicksight:GetDashboardEmbedUrl',
-                'Resource': str(d_arn)
-            }]
-        }
+        # policy_document = {
+        #     'Version': '2012-10-17',
+        #     'Statement': [{
+        #         'Effect': 'Allow',
+        #         'Action': 'quicksight:GetDashboardEmbedUrl',
+        #         'Resource': str(d_arn)
+        #     }]
+        # }
+        policy_document={
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Sid": "VisualEditor0",
+                            "Effect": "Allow",
+                            "Action": "quicksight:GetDashboardEmbedUrl",
+                            "Resource": "arn:aws:quicksight:*:*:dashboard/85c4d024-340d-4d06-acbc-994f71b9c96a"
+                        }
+                    ]
+                }
+
+
+
 
         #policy_document="{'Version': '2012-10-17','Statement': {'Effect': 'Allow','Action': 'quicksight:GetDashboardEmbedUrl','Resource':"+ d_arn+"}}"
         print(d_id)
