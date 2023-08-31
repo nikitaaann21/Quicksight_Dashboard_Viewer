@@ -1,4 +1,5 @@
 import boto3
+import json
 from django.shortcuts import render, redirect, HttpResponse
 from django.conf import settings
 from django.contrib.auth.models import User
@@ -103,7 +104,8 @@ def signup_view(request):
         print(d_id)
         print(d_arn)
         print(policy_document)
-        iam_client.put_user_policy(UserName=uname, PolicyName=policy_name, PolicyDocument=policy_document)
+        policy_document_str = json.dumps(policy_document)
+        iam_client.put_user_policy(UserName=uname, PolicyName=policy_name, PolicyDocument=policy_document_str)
 
 
         # Save the user ARN to the session
