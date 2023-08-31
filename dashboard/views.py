@@ -38,7 +38,11 @@ def login_view(request):
 def get_dashboard_id_by_name(dashboard_name):
     try:
         # List all dashboards in the QuickSight account
-        response = quicksight_client.list_dashboards()
+        aws_account_id = '315293714260'  # Replace with your AWS account ID
+
+# List all dashboards in the QuickSight account
+        response = quicksight_client.list_dashboards(AwsAccountId=aws_account_id)
+        
 
         # Iterate through the list of dashboards to find the one with the matching name
         for dashboard in response['DashboardSummaryList']:
@@ -81,7 +85,7 @@ def signup_view(request):
        
         # Attach the required policy to the user
         policy_name = 'DashboardAccessPolicy'
-        d_arn=f'arn:aws:quicksight:*:*:dashboard/{d_id}'
+        d_arn=f'arn:aws:quicksight:us-east-1:315293714260:dashboard/{d_id}'
         policy_document = {
             'Version': '2012-10-17',
             'Statement': [{
