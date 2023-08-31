@@ -46,11 +46,13 @@ def get_dashboard_id_by_name(dashboard_name):
                 # Return the DashboardId if the name matches
                 return dashboard['DashboardId']
 
-        # If the dashboard with the specified name is not found, return None
-        return None
+        # If the dashboard with the specified name is not found, raise an exception
+        raise Exception(f"Dashboard with name '{dashboard_name}' not found.")
+    
     except Exception as e:
-        # Handle exceptions here, you can customize the error response
-        return HttpResponse(f"Error: {str(e)}")
+        # Re-raise the exception so the caller can handle it
+        raise e
+
     
 def signup_view(request):
     if request.method=='POST':
@@ -85,11 +87,12 @@ def signup_view(request):
             'Statement': [{
                 'Effect': 'Allow',
                 'Action': 'quicksight:GetDashboardEmbedUrl',
-                'Resource': d_arn
+                'Resource': str(d_arn)
             }]
         }
 
         #policy_document="{'Version': '2012-10-17','Statement': {'Effect': 'Allow','Action': 'quicksight:GetDashboardEmbedUrl','Resource':"+ d_arn+"}}"
+        print(d_id)
         print(d_arn)
         print(policy_document)
         iam_client.put_user_policy(UserName=uname, PolicyName=policy_name, PolicyDocument=str(policy_document))
