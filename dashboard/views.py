@@ -74,11 +74,12 @@ def signup_view(request):
         iam_client.create_login_profile(UserName=uname, Password=pass1, PasswordResetRequired=False)
         dashboard_name=uname
         request.session['dashboard_name'] = dashboard_name
+        d_id = get_dashboard_id_by_name(dashboard_name)
 
        
         # Attach the required policy to the user
         policy_name = 'DashboardAccessPolicy'
-        d_arn=f'arn:aws:quicksight:*:*:dashboard/{dashboard_name}'
+        d_arn=f'arn:aws:quicksight:*:*:dashboard/{d_id}'
         policy_document = {
             'Version': '2012-10-17',
             'Statement': [{
@@ -107,6 +108,7 @@ def dashboard_view(request):
     user_arn = request.session.get('user_arn')
     dashboard_name = request.session.get('dashboard_name', None)
     dashboard_id = get_dashboard_id_by_name(dashboard_name)
+
     if dashboard_id:
         # Generate embed URL for the registered user
         embed_url = generateEmbedUrlForRegisteredUser(user_arn, dashboard_id)
