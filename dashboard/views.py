@@ -82,7 +82,7 @@ def signup_view(request):
         request.session['dashboard_name'] = dashboard_name
         d_id = get_dashboard_id_by_name(dashboard_name)
 
-       
+       #comment
         # Attach the required policy to the user
         policy_name = f'DashboardAccessPolicy_{dashboard_name}'
         d_arn=f'arn:aws:quicksight:*:*:dashboard/{d_id}'
